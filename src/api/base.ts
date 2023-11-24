@@ -1,0 +1,80 @@
+const base = {
+  host: 'http://localhost:5854', // 基础地址
+  navList: '/nav/list', // 导航栏
+  hotNav: '/nav/hotNav', // 热榜导航栏
+  topic: '/topic', // 话题分类
+  diffList: '/nav/diffList', // 文章分类
+  addressList: '/mine/address-list', // 获取地区
+  getCode: '/mine/GetCode', // 获取验证码
+  login_in: '/mine/login_in_phone', // 手机号登录接口
+  login_in_password: '/mine/login_in_password', // 密码登录接口
+  aboutMyself: '/mine/getMyInfo', // 个人信息
+  updateInfo: '/mine/saveORupdate', // 修改添加个人信息
+  updateUsername: '/mine/updateUsername', // 更新用户名
+  applyAccount: '/mine/applycationMyAccount', // 申请账号
+  updatePwd: '/mine/updatePassword', // 修改密码
+  outAccount: '/mine/logoutAccount', // 注销账户
+  sendEmail: '/mine/sendQQEmail', // 发送qq邮箱
+  changeEmail: '/mine/updateEmail', // 修改qq邮箱
+  Upload: '/common/upload', // 上传头像接口
+  imgUrl: '/common/download',
+  updateImg: '/mine/updateBackImg', // 更改背景图片数据
+  addEssay: '/essay/addEssay', // 添加文章
+  addColumn: '/column/addColumn', // 添加专栏
+  addEssayToColumns: '/column/addEssayToTheColumn', // 将文章添加到对应专栏
+  getMyColumn: '/column/getAllColumn', // 查询自己的专栏
+  getEssay: '/essay/getEssay', // 查看文章
+  getHomeEssById: '/essay/getEssayByNavId', // 根据左侧导航栏获取文章
+  getDraftEssay: '/essay/getEssayByDraft', // 查询草稿箱的文章
+  deleteEssaysByid: '/essay/deleteEssayByEssayId', // 删除草稿箱里的文章
+  getMyDraftEssay: '/essay/getEssayByUserId', // 草稿箱里所有状态的文章
+  updateEssayTop: '/essay/updateEssayTopById', // 根据文章id修改置顶状态
+  EditeEssay: '/essay/editEssay', // 编辑文章,
+  changeEssayContent: '/essay/editEssay-changeContent', //x修改文章内容
+  changeEssayStatus: '/essay/changeEssayStatus', // 修改文章的状态
+  getDraftColumn: '/column/getColumnByUserId', // 查看我的草稿箱里的专栏
+  getColumnInfo: '/column/getTheColumn', // 查看特某个专栏的介绍
+  updateColumnInfo: '/column/updateIntroduceOfColumn', // 修改专栏介绍
+  changeTopOfColumn: '/column/changeColumnTop', // 改变专栏的置顶状态
+  deleteColumn: '/column/deleteColumnById', // 删除专栏
+  addproblems: '/problems/addProblems', // 发布自己的问题
+  getProblems: '/problems/getAllProblems', // 查询所有的问题
+  changeProblemsTop: '/problems/changeProblemsTops', // 修改问题的置顶状态
+  deleteProblem: '/problems/deleteProblems', // 删除问题
+  getColumns: '/column/getColumns', // 查询所有的专栏
+  searchOrdering: '/ordering/searchOrdering', // 查询订阅的专栏
+  changeStatusOfOrder: '/ordering/updateOrdering', // 修改订阅状态
+  getUserFolders: '/folder/getFolder', // 获取用户自己的收藏夹
+  addFolders: '/folder/addFolder', // 添加收藏夹
+  deleteFolderBt: '/folder/deleteFoldersByIDS', // 批量删除收藏夹
+  addCollections: '/collection/addCollection', // 添加收藏文章
+  deleteCollection: '/collection/cancelCollection', // 取消收藏文章
+  countCollectionNum: '/collection/getCollectionNum', // 统计文章的收藏量
+  countLikeOfEssay: '/like/countEssayLikeNum', // 统计文章点赞的数量
+  likeEssay: '/like/likeEssay', // 点赞文章
+  cancelLike: '/like/deleteEssayLike', // 取消点赞文章
+  addReport: '/report/addReport', // 举报文章或者问题
+  getMyCollectionEssay: '/collection/getCollectionOfMine', // 查询我收藏的文章
+  getMyconcern: '/concern/myconcern', // 查询我关注的人
+  getConcernMe: '/concern/concernme',  // 查询关注我的人
+  getMyConcernColumns: '/column/getMyconcernColumn', // 查询我关注的专栏
+  getMyConcernProblems: '/problems/getMyConcernProblems' , // 查询我关注的问题
+  cancelOrConcern: '/concern/concernOrCancelConcern', // 关注获取取消关注用户
+  contDraftEssayNum: '/essay/countEssayOfDraftNum', // 计算草稿箱里的文章数量
+  addHistory: '/history/addHistory', // 添加历史记录
+  getHistoryNums: '/history/getHistory', // 查询我今天和昨天的浏览文章数量
+  getLikeNumsOfYandT: '/like/statisticsLikeNumOfTodayOrYestoday', // 查询我今天点赞的数量或者昨天点赞的数量
+  searchHistoryAndNums: '/history/searchHistory', // 查询我的历史记录
+  deleteMyHistoryItem: '/history/deleteHistoryItem', // 删除我的某项历史记录
+  deleteAllHistory: '/history/deleteAllHistory', // 删除我的所有记录
+  searchHistoryItem: '/history/searchHistoryItem' , // 模糊查询我的记录
+  deleteConcernProblems: '/problems/deleteMyConcernProblem' ,// 取消已经关注的问题
+  getEssaysBySearch: '/essay/getEssayBySearch', // 搜索文章
+  getNoReadConcern: '/concern/getNoReadConcern', // 获取关注我未读信息
+  updateConcernStatus: '/concern/updateConcernStatus', // 将未读更新
+  searchLikeMyself: '/like/getLikeOfMyself', // 查询点赞我的用户
+  updateLikeInfoStatus: '/like/updateLikeInfoStatus', // 更新点赞的未读状态
+  statisticsEssayViews: '/mine/statisticsEssayViews', // 计算用户的文章总共被阅读多少
+  statisticsLikeNums: '/mine/statisticsLikeNums', // 获取用户被点赞的数量
+}
+export default base
